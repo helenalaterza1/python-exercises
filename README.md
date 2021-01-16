@@ -11,7 +11,7 @@ name = input("Enter file:")
 if len(name) < 1 : name = "mbox-short.txt"
 handle = open(name)
 
-# Finding usefull lines - adding the full hours to a list
+#Finding usefull lines - adding the full hours to a list
 
 lst = list()
 
@@ -21,21 +21,21 @@ for line in handle:
         words = line.split()
         lst.append(words[5])
 
-# Adding only the hours (not minutes and seconds) to a list
+#Adding only the hours (not minutes and seconds) to a list
 
 hrs = list()
         
 for hours in lst:
     hrs.append(hours[0:2])
 
-# Creating a dictionary to count occurences of each hour
+#Creating a dictionary to count occurences of each hour
     
 counts = dict()
 
 for fhours in hrs:
     counts[fhours] = counts.get(fhours,0) + 1
         
-# Creating list of tuples to sort dictionary
+#Creating list of tuples to sort dictionary
 
 sorted_hours = list()
 
